@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genshin Impact Characters</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(56, 56, 97); 
+            color: white;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 20px; 
+        }
+
+        .banner {
+            text-align: center;
+            margin-top: 20px; 
+        }
+
+        .banner img {
+            width: 60%; 
+            height: auto; 
+            display: block;
+            margin: 0 auto; 
+        }
+
+        .character-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .character {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .character img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .character:hover {
+            transform: scale(1.1);
+        }
+
+        .character-name {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .character:hover .character-name {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .character-caption {
+            text-align: center;
+            margin-top: 20px; 
+        }
+
+        .characters-title {
+            text-align: center;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Genshin Wiki</h1>
+    </div>
+
+    <div class="banner">
+        <img src="Inazuma City.jpeg" alt="Banner">
+    </div>
+
+    <h2 class="characters-title">Characters</h2>
+
+    <div class="character-container">
+        <div class="character" onclick="openCharacterPage('hu_tao')">
+            <img src="https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/hu_tao/image.png?strip=all&quality=100&w=140" alt="Character 1">
+            <p class="character-name">Hu Tao</p>
+        </div>
+        <div class="character" onclick="openCharacterPage('raiden_shogun')">
+            <img src="https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/raiden_shogun/image.png?strip=all&quality=100&w=140" alt="Character 2">
+            <p class="character-name">Raiden Shogun</p>
+        </div>
+        <div class="character" onclick="openCharacterPage('zhongli')">
+            <img src="https://i2.wp.com/genshinbuilds.aipurrjects.com/genshin/characters/zhongli/image.png?strip=all&quality=100&w=140" alt="Character 3">
+            <p class="character-name">Zhongli</p>
+        </div>
+    </div>
+
+    <script>
+        function openCharacterPage(characterName) {
+    // Navigasi ke file lokal sesuai pilihan
+    if (characterName === 'hu_tao') {
+        window.location.href = 'HuTao.html';
+    } else if (characterName === 'raiden_shogun') {
+        window.location.href = 'RaidenShogun.html';
+    } else if (characterName === 'zhongli') {
+        window.location.href = 'Zhongli.html';
+    }
+}
+    </script>
+</body>
+</html>

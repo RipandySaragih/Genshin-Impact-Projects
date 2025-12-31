@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(56, 56, 97); 
+    color: white;
+}
+
+.header {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.banner {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.banner img {
+    width: 60%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto; 
+}
+
+.character-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.character {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.character img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.character:hover {
+    transform: scale(1.1);
+}
+
+.character-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.character:hover .character-name {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.character-caption {
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.characters-title {
+    text-align: center;
+    margin-top: 20px; 
+}

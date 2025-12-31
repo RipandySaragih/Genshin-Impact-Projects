@@ -1,0 +1,71 @@
+<?php
+$HuTao = 'https://genshin.jmp.blue/characters/Hu-Tao'
+$json = file_get_contents($HuTao);
+$data = json_decode($json, true);
+
+// Check if data is successfully retrieved
+if ($data !== null) {
+    // Extracting information
+    $name = $data['name'];
+    $title = $data['title'];
+    $vision = $data['vision'];
+    $weapon = $data['weapon'];
+    $gender = $data['gender'];
+    $nation = $data['nation'];
+    $affiliation = $data['affiliation'];
+    $rarity = $data['rarity'];
+    $release = $data['release'];
+    $constellation = $data['constellation'];
+    $birthday = $data['birthday'];
+    $description = $data['description'];
+    
+    // Printing information
+    echo "Name: $name\n";
+    echo "Title: $title\n";
+    echo "Vision: $vision\n";
+    echo "Weapon: $weapon\n";
+    echo "Gender: $gender\n";
+    echo "Nation: $nation\n";
+    echo "Affiliation: $affiliation\n";
+    echo "Rarity: $rarity\n";
+    echo "Release: $release\n";
+    echo "Constellation: $constellation\n";
+    echo "Birthday: $birthday\n";
+    echo "Description: $description\n";
+    
+    // Printing skill talents
+    echo "\nSkill Talents:\n";
+    foreach ($data['skillTalents'] as $talent) {
+        echo "Name: {$talent['name']}\n";
+        echo "Unlock: {$talent['unlock']}\n";
+        echo "Description: {$talent['description']}\n";
+        echo "Type: {$talent['type']}\n\n";
+    }
+    
+    // Printing passive talents
+    echo "Passive Talents:\n";
+    foreach ($data['passiveTalents'] as $talent) {
+        echo "Name: {$talent['name']}\n";
+        echo "Unlock: {$talent['unlock']}\n";
+        echo "Description: {$talent['description']}\n";
+        if (isset($talent['level'])) {
+            echo "Level: {$talent['level']}\n\n";
+        } else {
+            echo "\n";
+        }
+    }
+    
+    // Printing constellations
+    echo "Constellations:\n";
+    foreach ($data['constellations'] as $constellation) {
+        echo "Name: {$constellation['name']}\n";
+        echo "Unlock: {$constellation['unlock']}\n";
+        echo "Description: {$constellation['description']}\n";
+        echo "Level: {$constellation['level']}\n\n";
+    }
+} else {
+    // Handle error if data retrieval fails
+    echo "Failed to retrieve data from the API.";
+}
+
+?>

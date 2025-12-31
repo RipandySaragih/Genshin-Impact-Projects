@@ -1,0 +1,120 @@
+/* stylechar.css */
+
+/* Reset & Dasar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white; /* Menyesuaikan dengan tema gelap Genshin */
+    line-height: 1.6;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Kontainer Teks Deskripsi */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+strong {
+    color: #ffeb3b; /* Warna kuning khas untuk label */
+}
+
+/* Gambar Karakter Utama (Full Body) di Bawah Teks */
+.main-img-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.main-img-container img {
+    max-width: 500px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Navigasi Cepat (Meniru gaya .character pada character.html) */
+.quick-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+
+.mini-char {
+    width: 150px; /* Ukuran navigasi detail lebih kecil dari menu utama */
+    height: 150px; 
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    border: 2px solid white;
+}
+
+.mini-char img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mencegah gambar gepeng */
+    transition: transform 0.3s ease;
+}
+
+.mini-char:hover {
+    transform: scale(1.1);
+}
+
+/* Label Nama di Dalam Lingkaran (Meniru .character-name) */
+.mini-char-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Tombol Kembali di Paling Bawah */
+.back-btn-container {
+    text-align: center;
+    margin: 40px 0 60px 0;
+}
+
+.back-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Beranda</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: black; 
+            font-family: Arial, sans-serif;
+        }
+        
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; 
+        }
+        
+        .content {
+            position: relative;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 48px; 
+            margin-bottom: 16px; 
+        }
+        
+        p {
+            font-size: 18px;
+        }
+
+        .nav-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            display: flex;
+        }
+
+        .floating-nav {
+            background-color: transparent;
+            padding: 30px 50px;
+            border-radius: 10px;
+        }
+        
+        .floating-nav a {
+            display: inline-block;
+            margin-right: 40px; 
+            color: #fff; 
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .floating-nav a:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <video id="background-video" loop muted autoplay>
+    <source src="video_background.mp4" type="video/mp4">
+    </video>
+    
+    <div class="content">
+        <h1><span id="welcome-text"></span></h1>
+        <div class="nav-container">
+            <div class="floating-nav">
+                <a href="character.html">Character</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var welcomeText = document.getElementById('welcome-text');
+        var text = "Welcome Traveler";
+        var index = 0;
+        var speed = 150;
+
+        function typeWriter() {
+            if (index < text.length) {
+                welcomeText.innerHTML += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
+</body>
+</html>
