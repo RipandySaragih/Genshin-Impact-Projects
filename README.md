@@ -26,12 +26,6 @@ Proyek ini adalah sebuah platform berbasis web yang berfungsi sebagai ensikloped
 - `HuTao.html`: Contoh halaman detail karakter dengan styling khusus.
 - `style.css` & `stylechar.css`: File stylesheet untuk memastikan tampilan konsisten dan menarik.
 
-## 📸 Tampilan Web (Demo)
-*Anda dapat menyisipkan screenshot web Anda di sini untuk menarik perhatian HRD*
-
-![Home Page Screenshot](link-ke-foto-beranda)
-![Character List Screenshot](link-ke-foto-list)
-
 ## Cara Menjalankan Secara Lokal
 
 1. Clone repositori ini:
